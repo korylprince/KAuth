@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+body {
+    text-align: center;
+}
+
+#header {
+    text-align: center;
+    font-size: 24pt;
+    border: 1px solid #ddd;
+    color: #0073ea;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#loginboxwrapper, #returnboxwrapper {
+    border: 1px solid #ddd;
+    background-color: #eee;
+    margin-top: -1px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#returnboxwrapper {
+    display: inline-block;
+    width: auto;
+}
+
+#loginbox {
+    text-align: center;
+    padding: 5px;
+    margin: 15px;
+}
+
+#loginbox input, #loginbox button {
+    clear: both;
+}
+
+#passwordtext {
+    display: none;
+}
+
+#returnbox {
+    padding: 5px;
+    margin: 15px;
+    display: inline-block;
+    font-size: 12pt;
+}
+
+.ui-corner-all {
+    -moz-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+/* jsonPrettier */
+.jsonblock, .pair {
+    text-align: left;
+}
+
+.indent {
+    margin-left: 20px;
+}
+
+.key {
+    color: #a40000;
+}
+
+.value {
+    color: #4e9006;
+}
+
+.character, .colon {
+    color: #ffca0a;
+}
+
+.colon {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* End jsonPrettier */

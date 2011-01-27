@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>PHP Auth Test Page</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="jsmin.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/themes/flick/jquery-ui.css" rel="stylesheet" type="text/css" />
+        <link href="main.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header" class="ui-widget ui-corner-all">Login Test</div>
+            <div id="loginboxwrapper" class="ui-widget ui-corner-all">
+                <div id="loginbox" class="ui-widget-content ui-corner-all">
+                    Username:<br />
+                    <input type="text" name="username" class="ui-state-default"/><br />
+                    Password:<br />
+                    <input type="password" name="password"  class="ui-state-default"/>
+                    <input id="passwordtext" type="text" name="passwordtext"  class="ui-state-default"/><br />
+                    <input type="checkbox" name="showpassword"  class="ui-state-default"/> Show Password<br />
+                    <button id="submitbutton">Submit</button>
+                </div>
+            </div>
+            <div id="returnboxwrapper" class="ui-widget ui-corner-all">
+                <div id="returnbox" class="ui-widget-content ui-corner-all">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
