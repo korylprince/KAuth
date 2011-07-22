@@ -16,9 +16,9 @@
             <div id="loginboxwrapper" class="ui-widget ui-corner-all">
                 <div id="loginbox" class="ui-widget-content ui-corner-all">
                     Username:<br />
-                    <input type="text" name="username" class="ui-state-default"/><br />
+                    <input type="text" name="username" class="ui-state-default" onkeypress="if(event.keyCode==13){$('#submitbutton').trigger('click');}"/><br />
                     Password:<br />
-                    <input type="password" name="password"  class="ui-state-default"/>
+                    <input type="password" name="password"  class="ui-state-default" onkeypress="if(event.keyCode==13){$('#submitbutton').trigger('click');}"/>
                     <input id="passwordtext" type="text" name="passwordtext"  class="ui-state-default"/><br />
                     <input type="checkbox" name="showpassword"  class="ui-state-default"/> Show Password<br />
                     <button id="submitbutton">Submit</button>
