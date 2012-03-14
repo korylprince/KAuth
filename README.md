@@ -5,9 +5,12 @@ https://github.com/korylprince/KAuth
 
 This has been installed on various types of servers. It should work on any machine as long as it is running a webserver and PHP (5+).
 
-If you are using the ldap_ad extension you will need php-ldap.
+If you are using the ldap_ad\ extension you will need php-ldap.
 
 Simply copy the KAuth folder to your web directory and copy auth/options.php.def to auth/options.php and edit it for authentication options.
+
+Also included are three files, dl.list.def, al.list.def, and users.list.def. These files are examples for the al, dl, and password\_file libraries. To use them copy them to al.list, dl.list, or users.list and enable the libraries in options.php.
+
 There is a simple interface for testing logins included. Just visit your website with the correct directory.
 
 If you have any issues or questions, email the email address below, or open an issue at:
