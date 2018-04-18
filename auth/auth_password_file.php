@@ -1,7 +1,7 @@
 <?php
   //Uses options password_file_location
-  //users.list should contain a json encoded list of username/password pairs : {{"User5":"29619e53a21f1152ddb9d74639d6104d","noPassword":["User6"]}
-  //Passwords should be hashed as: $hash = call_user_func($options['hashFunction'],$password.$options['passwordSalt'])
+  //users.list should contain a json encoded list of username/password pairs : {{"User5":"$2y$10$fizPKFBd89xrC98W5gGoTO0xkXrrZKxulgFrf/GHUpTFot3NVBpVG","noPassword":["User6"]}
+  //Passwords should be hashed with the password_hash function
   //if an entry contains noPassword:[array of users] then a password is not required for those users and a flag is returned.
   function password_file_auth($username, $password, $options)
   {
@@ -30,15 +30,8 @@
       if (!isset($list[$username])) {
           return array('Login' => 'None');
       }
-      //Set if not set in options
-      if (!isset($options['hashFunction'])) {
-          $options['hashFunction'] = 'md5';
-      }
-      if (!isset($options['passwordSalt'])) {
-          $options['passwordSalt'] = '';
-      }
       //Check if passwords match
-      if ($list[$username] == call_user_func($options['hashFunction'], $password . $options['passwordSalt'])) {
+      if (password_verify($password, $list[$username])) {
           return array('Login' => 'True');
       } else {
           return array('Login' => 'None');

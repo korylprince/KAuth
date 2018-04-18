@@ -25,8 +25,4 @@ $options['password_file_location'] = 'users.list'; #Location of file containing 
 $options['noSessionTime'] = 0; #Do not put a time limit on the session login. Not recommended. 0 for false, any other value for true. Invalidates sessionTime.
 $options['sessionTime'] = (10 * 60); #Number of seconds the session for a user will remain active. Default is (10 * 60) or ten minutes if not specified.
 $options['sessionLibrary'] = 'session_lib.php'; #Optional session functions to use instead of default PHP sessions.
-
-/* Password Salting and Hashing*/
-$options['passwordSalt'] = '$at-least-14-characters!'; #A string to use for password salting. Recommended.
-$options['hashFunction'] = 'md5'; #Specify the hashing function for passwords. Must return a hash value. Default is md5.
 ?>
